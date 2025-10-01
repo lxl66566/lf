@@ -10,7 +10,7 @@ version     = "0.1.0"
 
 [dependencies]
 palc    = { version = "0.0.1", features = ["derive"] }
-rayon   = "1.10"
+rayon   = "1.11"
 walkdir = "2.3"
 
 [profile.release]
