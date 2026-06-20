@@ -1,4 +1,5 @@
 [package]
+categories  = ["command-line-utilities"]
 description = "A command-line tool to change line endings in text files."
 edition     = "2024"
 homepage    = "https://github.com/lxl66566/lf"
@@ -6,15 +7,15 @@ keywords    = ["cli", "lf", "crlf"]
 license     = "MIT"
 name        = "lf"
 repository  = "https://github.com/lxl66566/lf"
-version     = "0.1.0"
+version     = "0.1.1"
 
 [dependencies]
-palc    = { version = "0.0.1", features = ["derive"] }
-rayon   = "1.10"
+palc    = { version = "0.0.2" }
+rayon   = "1"
 walkdir = "2.3"
 
 [profile.release]
 lto       = true
-opt-level = "z"
+opt-level = "s"
 panic     = "abort"
 strip     = true
