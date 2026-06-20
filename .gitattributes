@@ -1,0 +1,11 @@
+# Auto-detect text files and force LF line endings on checkout.
+# This prevents git from silently converting the lf crate's own source
+# files to CRLF on Windows, which would be ironic.
+* text=auto eol=lf
+
+# Binary files — never normalize.
+*.png binary
+*.jpg binary
+*.ico binary
+*.zip binary
+*.gz  binary

@@ -1,18 +1,23 @@
 [package]
-categories  = ["command-line-utilities"]
-description = "A command-line tool to change line endings in text files."
-edition     = "2024"
-homepage    = "https://github.com/lxl66566/lf"
-keywords    = ["cli", "lf", "crlf"]
-license     = "MIT"
-name        = "lf"
-repository  = "https://github.com/lxl66566/lf"
-version     = "0.1.1"
+categories   = ["command-line-utilities"]
+description  = "A high-performance command-line tool to convert line endings of text files to LF."
+edition      = "2024"
+homepage     = "https://github.com/lxl66566/lf"
+keywords     = ["cli", "lf", "crlf", "line-ending"]
+license      = "MIT"
+name         = "lf"
+repository   = "https://github.com/lxl66566/lf"
+rust-version = "1.85"
+version      = "0.2.0"
 
 [dependencies]
-palc    = { version = "0.0.2" }
-rayon   = "1"
-walkdir = "2.3"
+ignore   = { version = "0.4", optional = true }
+palc     = { version = "0.0.2", optional = true }
+tempfile = "3"
+
+[features]
+bin     = ["ignore", "palc"]
+default = ["bin"]
 
 [profile.release]
 lto       = true
